@@ -151,3 +151,27 @@ img {
   #header_area.center_menu .col-md-9 ul ul{
     text-align: left;
   }
+
+/*===========================================
+  Footer Position
+===========================================*/
+
+#copyright_area {
+    background: #292929;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+}
+
+#copyright_area p {
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+}
+
+#copyright_area p a {
+    color: #eaeaea;
+}
+#copyright_area p a:hover{
+    text-decoration: underline;
+}

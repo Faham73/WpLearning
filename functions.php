@@ -74,6 +74,22 @@ function faham_customizar_register($wp_customize)
             'center_menu' => 'Center Menu'
         )
     ));
+
+    // Footer Position Option
+    $wp_customize->add_section('faham_footer_option', array(
+        'title' => __('Footer Position Option', 'twentytwentytwo'),
+        'description' => 'If you want to change anything of footer area you can do it here'
+    ));
+    $wp_customize->add_setting('faham_copyright_section',array(
+        'default' => '&copy; Copyright 2021 | towhidur@faham',
+    ));
+    $wp_customize->add_control('faham_copyright_section', array(
+        'label' => 'Copyright Text',
+        'description' => 'If you want to change footer position you can do it here.',
+        'section' => 'faham_footer_option',
+        'setting' => 'faham_footer_position'
+    ));
+
 }
 
 add_action('customize_register', 'faham_customizar_register');
