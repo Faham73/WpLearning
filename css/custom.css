@@ -26,6 +26,19 @@ img {
     max-width: 100%;
 }
 
+a.readmore {
+    background: #ea1a70;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px 25px;
+    transition: 0.5s;
+}
+
+a.readmore:hover {
+    background: #262626;
+}
+
 /*=======================================
    Header Area Style
   ========================================*/
@@ -164,6 +177,11 @@ img {
 #body_area{
     padding: 45px 0;
 }
+#body_area .blog_area {
+    background: whitesmoke;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
 #body_area .blog-area{
     width: 100%;
     margin-bottom: 15px;
@@ -196,6 +214,33 @@ img {
 }
 #body_area .post_details h2 a:hover{
     color:#ea1a70;
+}
+
+
+/*===========================================
+  PageNav Area Position
+===========================================*/
+
+#page_nav p.pages {
+    background: #ea1a70;
+    padding: 5px 10px;
+    color: #fff;
+}
+#page_nav p.pages span {
+    display: inline-block;
+    padding: 0 5px;
+}
+#page_nav .page-numbers{
+    background: #ea1a70;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    transition: 0.5s;
+}
+#page_nav .page-numbers.current, #page_nav .page-numbers:hover{
+    background-color: #262626;
 }
 
 
