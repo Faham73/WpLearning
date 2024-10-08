@@ -44,6 +44,7 @@ a.readmore:hover {
   ========================================*/
 #header_area {
     padding: 10px 0;
+    box-shadow: 0px 5px  10px #ddd;
 }
 
 #header_area .col-md-9 ul {
@@ -178,13 +179,12 @@ a.readmore:hover {
     padding: 45px 0;
 }
 #body_area .blog_area {
-    background: whitesmoke;
-    padding: 5px 10px;
-    margin-bottom: 10px;
-}
-#body_area .blog-area{
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0px 0px  10px #ddd;
+
 }
 #body_area .post_thumb{
     overflow: hidden;
@@ -199,8 +199,11 @@ a.readmore:hover {
 #body_area .post_thumb:hover img {
     transform: scale(1.1);
 }
-#body_area .post_details{
+#body_area .post_details {
     width: 100%;
+}
+#body_area .post_details div {
+    width: 100% |!important;
 }
 #body_area .post_details h2{
     font-family: 'Roboto',  sans-serif;
@@ -215,6 +218,77 @@ a.readmore:hover {
 #body_area .post_details h2 a:hover{
     color:#ea1a70;
 }
+
+
+/*===========================================
+  Sidebar Area Position
+===========================================*/
+.child_sidebar {
+    margin-bottom: 20px;
+}
+.child_sidebar h2 {
+    font-family: 'Roboto',  sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 0;
+    line-height: 1em;
+    border-left: 5px solid #ea1a70;
+    padding-left: 10px;
+}
+.child_sidebar input[type="search"] {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.child_sidebar button[type="submit"] {
+    background: #ea1a70;
+    border: 1px solid #ea1a70;
+    padding: 10px;
+    margin: 0;
+    color: #fff;
+    transition: 0.5s;
+}
+.child_sidebar button[type="submit"]:hover {
+    background: #262626;
+    border: 1px solid #fff;
+}
+.child_sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+.child_sidebar ul li {
+    display: block;
+    margin-bottom: 5px;
+}
+.child_sidebar ul li a {
+    display: inline-block;
+    color: #262626;
+    text-decoration: none;
+}
+.child_sidebar ul li a:hover {
+    color: #ea1a70;
+}
+.child_sidebar a.tag-cloud-link {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px !important;
+    text-decoration: none;
+    margin-bottom: 5px;
+    background: #ea1a70;
+    padding: 5px;
+}
+.child_sidebar a.tag-cloud-link:hover {
+    color: #fff;
+    background: #262626;
+}
+.wp-block-calendar table:where(:not(.has-text-color)) td#today {
+    border-color: #ddd;
+    background: #ea1a70;
+    color: #fff;
+}
+
 
 
 /*===========================================
@@ -243,6 +317,22 @@ a.readmore:hover {
     background-color: #262626;
 }
 
+
+/*===========================================
+  Footer Area Position
+===========================================*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Oswald", sans-serif;
+    line-height: 1.5em;
+    font-weight: 700;
+    font-size: 30px;
+}
+#footer{
+    background: #292929;
+    padding: 40px 0 20px;
+    color: #fff;
+    border: 1px solid #ddd;
+}
 
 /*===========================================
   Copyright Area Position
