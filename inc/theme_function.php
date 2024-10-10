@@ -55,8 +55,43 @@ function faham_customizar_register($wp_customize)
         'setting' => 'faham_footer_position'
     ));
 
+    // Theme Color
+    $wp_customize-> add_section('faham_colors', array(
+        'title' => __('Theme Color', 'twentytwentytwo'),
+        'description' => __('If you want to change theme color you can do it here'),
+    ));
+    $wp_customize->add_setting('faham_bg_color',array(
+        'default' => '#ffffff',
+
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'faham_bg_color', array(
+        'label' => 'Background Color',
+        'section' => 'faham_colors',
+        'settings' => 'faham_bg_color',
+    )));
+    $wp_customize->add_setting('faham_primary_color',array(
+        'default' => '#ea1a70',
+
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'faham_primary_color', array(
+        'label' => 'Primary Color',
+        'section' => 'faham_colors',
+        'settings' => 'faham_primary_color',
+    )));
+
+
 }
 
-
-
 add_action('customize_register', 'faham_customizar_register');
+
+
+function faham_theme_color_cus(){
+    ?>
+        <style>
+            body{ background:<?php echo get_theme_mod('faham_bg_color') ; ?> }
+            :root{ --pink: <?php echo get_theme_mod('faham_primary_color') ; ?> }
+        </style>
+    <?php
+}
+
+add_action('wp_head','faham_theme_color_cus');
