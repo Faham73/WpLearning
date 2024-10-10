@@ -4,7 +4,8 @@
 add_theme_support('title-tag');
 
 // Theme Image Area
-add_theme_support('post-thumbnails', array('page', 'post'));
+add_theme_support('post-thumbnails', array('page', 'post','service'));
+add_image_size('service', 400, 200, true);
 add_image_size('post-thumbnails', 1205, 500, true);
 
 
