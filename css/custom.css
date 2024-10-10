@@ -26,16 +26,17 @@ img {
     max-width: 100%;
 }
 
-a.readmore {
+a.readmore, input[type="submit"].submit {
     background: #ea1a70;
     color: #fff;
+    border: 0;
     font-size: 15px;
     text-decoration: none;
     padding: 10px 25px;
     transition: 0.5s;
 }
 
-a.readmore:hover {
+a.readmore:hover, input[type="submit"].submit:hover {
     background: #262626;
 }
 
@@ -173,7 +174,7 @@ a.readmore:hover {
 
   
 /*=======================================
-   Index Page Style
+   Index Page Styling
   ========================================*/
 #body_area{
     padding: 45px 0;
@@ -185,6 +186,10 @@ a.readmore:hover {
     padding: 15px;
     box-shadow: 0px 0px  10px #ddd;
 
+}
+#body_area .post_details .blog_area {
+    width: 100%;
+    padding-top: 0;
 }
 #body_area .post_thumb{
     overflow: hidden;
@@ -219,9 +224,23 @@ a.readmore:hover {
     color:#ea1a70;
 }
 
-
 /*===========================================
-  Sidebar Area Position
+  Sidebar Area Styling
+===========================================*/
+
+#archive_title, #search_title {
+    background: #ea1a70;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+#archive_title h3, #search_title h3 {
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+/*===========================================
+  Sidebar Area Styling
 ===========================================*/
 .child_sidebar {
     margin-bottom: 20px;
@@ -292,7 +311,7 @@ a.readmore:hover {
 
 
 /*===========================================
-  PageNav Area Position
+  PageNav Area Styling
 ===========================================*/
 
 #page_nav p.pages {
@@ -319,14 +338,9 @@ a.readmore:hover {
 
 
 /*===========================================
-  Footer Area Position
+  Footer Area Styling
 ===========================================*/
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Oswald", sans-serif;
-    line-height: 1.5em;
-    font-weight: 700;
-    font-size: 30px;
-}
+
 #footer{
     background: #292929;
     padding: 40px 0 20px;
@@ -335,7 +349,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*===========================================
-  Copyright Area Position
+  Copyright Area Styling
 ===========================================*/
 
 #copyright_area {
@@ -357,3 +371,156 @@ h1, h2, h3, h4, h5, h6 {
 #copyright_area p a:hover{
     text-decoration: underline;
 }
+
+/*===========================================
+  Copyright Area Styling
+===========================================*/
+#comments_area h3 {
+    font-family: 'Roboto',  sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 1em;
+    border-left: 5px solid #ea1a70;
+    padding-left: 10px;
+}
+#comments_area label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  #comments_area input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+  }
+  #comments_area textarea,
+  #comments_area input {
+    border: 1px solid #ddd;
+    width: 100%;
+    padding: 15px;
+  }
+  #comments_area textarea {
+    min-height: 150px;
+  }
+
+/* ==========================================================================
+   Comments Area
+========================================================================== */
+.comments-area {
+    background: #fff none repeat scroll 0 0;
+    clear: both;
+    margin: 20px auto 0;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+  }
+  .comments-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .comment-list,
+  .comment-list .children {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .comment-list li:before {
+    display: none;
+  }
+  .comment-body {
+    margin-bottom: 20px;
+    margin-left: 65px;
+  }
+  .comment-author {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 2;
+  }
+  .comment-author a {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 2;
+  }
+  .comment-author .avatar {
+    height: 50px;
+    left: -65px;
+    position: absolute;
+    width: 50px;
+  }
+  .comment-author .says {
+    display: none;
+  }
+  .comment-meta {
+    color: #c4c4c4;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .comment-metadata {
+    color: #767676;
+    font-size: 10px;
+    font-size: 0.625rem;
+    font-weight: 800;
+    letter-spacing: 0.1818em;
+    text-transform: uppercase;
+  }
+  .comment-metadata a {
+    color: #767676;
+  }
+  .comment-metadata a.comment-edit-link {
+    color: #222;
+    margin-left: 1em;
+  }
+  .comment-body {
+    color: #333;
+    font-size: 14px;
+  }
+  .comment-reply-link {
+    font-weight: 800;
+    position: relative;
+  }
+  .comment-reply-link .icon {
+    color: #222;
+    left: -2em;
+    height: 1em;
+    position: absolute;
+    top: 0;
+    width: 1em;
+  }
+  .children .comment-author .avatar {
+    height: 30px;
+    left: -45px;
+    width: 30px;
+  }
+  .bypostauthor > .comment-body > .comment-meta > .comment-author .avatar {
+    border: 1px solid #333;
+    padding: 2px;
+  }
+  .no-comments,
+  .comment-awaiting-moderation {
+    color: #767676;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-style: italic;
+  }
+  .comments-pagination {
+    margin: 2em 0 3em;
+  }
+  .form-submit {
+    text-align: left;
+  }
+  .form-submit #submit {
+    width: auto;
+  }
+  .comment-form #wp-comment-cookies-consent {
+    margin: 0 10px 0 0;
+  }
+  .comment-form .comment-form-cookies-consent label {
+    display: inline;
+  }

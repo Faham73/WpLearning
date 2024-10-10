@@ -57,4 +57,6 @@ function faham_customizar_register($wp_customize)
 
 }
 
+
+
 add_action('customize_register', 'faham_customizar_register');
