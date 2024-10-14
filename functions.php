@@ -22,6 +22,9 @@ include_once('inc/menu_register.php');
 // Widgets Register
 include_once('inc/widgets_register.php');
 
+// Shortcode Register
+include_once('inc/shortcode.php');
+
 // comments
 function faham_get_icon_svg( $icon ) {
     if ( 'arrow_left' === $icon ) {
