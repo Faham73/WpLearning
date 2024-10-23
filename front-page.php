@@ -1,49 +1,63 @@
 <?php
 
 
-get_header();  ?>
+get_header(); 
 
+?>
 
 <section id="slider_area">
     <div class="slider">
-        <div>hi im faham and my slider is not working</div>
-        <?php query_posts('post_type=slider&post_status+publish&post_per_page=3&order=ASC&paged=' . get_query_var('post'));
-        if (have_posts()) :
-            while (have_posts()) : the_post();
-        ?>
-                <div>
-                    <?php echo the_post_thumbnail('slider'); ?>
-                </div>
+      <?php 
+        query_posts('post_type=slider&post_status=publish&posts_per_page=3&order=ASC&paged='. get_query_var('post')); 
 
-        <?php
-            endwhile;
-        endif;
+        if(have_posts()) :
+          while(have_posts()) : the_post(); 
+        ?>
+        <div>
+          <?php echo the_post_thumbnail('slider') ?>
+        </div>
+
+        <?php 
+          endwhile;
+          endif;
         ?>
     </div>
-</section>
-<section id="service_area">
+  </section>
+
+<div id="homepage_post">
     <div class="container">
         <div class="row">
-            <?php query_posts('post_type=service&post_status+publish&post_per_page=3&order=ASC&paged=' . get_query_var('post'));
-
-            if (have_posts()) :
-                while (have_posts()) : the_post();
-            ?>
-                    <div class="col-md-4">
-                        <div class="child_service">
-                            <h2><?php the_title(); ?></h2>
-                            <?php echo the_post_thumbnail('service'); ?>
-                            <?php the_excerpt(); ?>
-                        </div>
-                    </div>
-
-            <?php
-                endwhile;
-            endif;
-            ?>
+            <div class="col-md-12">
+            <?php dynamic_sidebar( 'home-1'); ?>
+            </div>
         </div>
     </div>
-</section>
+</div>
 
+
+<section id="service_area">
+    <div class="container">
+      <div class="row">
+        <?php 
+        query_posts('post_type=service&post_status=publish&posts_per_page=3&order=ASC&paged='. get_query_var('post')); 
+
+        if(have_posts()) :
+          while(have_posts()) : the_post(); 
+        ?>
+        <div class="col-md-4">
+          <div class="child_service">
+          <h2><?php the_title(); ?></h2>
+          <?php echo the_post_thumbnail('service') ?>
+          <?php the_excerpt(  ); ?>
+          </div>
+        </div>
+
+        <?php 
+          endwhile;
+          endif;
+        ?>
+      </div>
+    </div>
+  </section>
 
 <?php get_footer();  ?>

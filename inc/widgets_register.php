@@ -38,6 +38,15 @@ function faham_widgets_register(){
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
+    register_sidebar(array(
+        'name' => __('Homepage Widget', 'twentytwentytwo'),
+        'id' => 'home-1',
+        'description' =>  __('Add widgets here to appear in your sidebar.', 'twentytwentytwo'),
+        'before_widget' => '<div class="child_home" >',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
 }
 
 add_action('widgets_init','faham_widgets_register');
